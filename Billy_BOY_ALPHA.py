@@ -4,6 +4,8 @@ import requests
 from urllib import parse
 import json
 import time
+import os
+
 
 
 ################################## MAIN CODE ###############################################
@@ -13,12 +15,12 @@ import time
 # Change Values *required:
 
 #CO/MAGTI
-Username = 'YOUR CO/MAGTI USERNAME'
-Password = 'YOUR CO/MAGTI PASSWORD'
+Username = 'guja001'
+Password = 'anastasia001'
 ###
 
 #Telasi
-Telasi_id = 'ID'
+Telasi_id = '653145'
 
 ###########################
 
@@ -99,6 +101,8 @@ for ultag in soup.find_all('div', {'class': 'pull-right'}):
     pay_day_water_filter.append(ultag.text)
 
 pay_day_water = pay_day_water_filter[-1]
+
+os.system('notify-send "TITLE" "MESSAGE"')
 
 
 print(pay_day_water)
